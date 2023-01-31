@@ -1,0 +1,14 @@
+uvicorn
+sqlalchemy
+passlib
+bcrypt
+python-jose
+python-multipart
+jinja2
+streamlit
+streamlit_lottie
+streamlit_option_menu
+streamlit_authenticator
+aiofiles
+black
+
