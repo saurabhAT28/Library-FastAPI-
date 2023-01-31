@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+<title> Home </title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<!-- <h1>City Library</h1> -->
+	{% if msg %}
+	<div class="alert alert-success" role="alert">
+		{{msg}}
+	  </div>
+	{% endif %}
+	<div class="row">
+		
+		{% for book in books %}
+		<div class="col-lg-4 col-md-4">
+			{% with cbook=book %}
+				{% include 'card.html' %}
+			{% endwith %}
+		</div>
+		{% endfor %}
+	</div>
+
+</div>
+
+{% endblock %}

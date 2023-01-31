@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title>Issue a Book</title>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="text-center">Issue Book</h1>
+		{% for error in errors %}
+			<div class="alert alert-danger" role="alert">
+  				{{ error }}
+			</div>
+		{% endfor %}
+		<form method="POST">
+		  <div class="mb-3">
+		    <label for="title" class="form-label">Book Title</label>
+		    <input type="text" class="form-control" required name="title" placeholder="enter book title">
+		 </div>
+		 <div class="mb-3">
+    		<label for="author" class="form-label">Author</label>
+    		<input type="text" class="form-control" required name="author" placeholder="Enter author name"></input>
+  		</div>
+		  <div class="mb-3">
+    		<label for="quantity" class="form-label">Quantity</label>
+    		<input type="number" class="form-control" required name="quantity" placeholder="Enter quantity"></input>
+  		</div>
+  			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+{% endblock %}

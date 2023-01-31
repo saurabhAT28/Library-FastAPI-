@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="fb.png" alt="">
+                <img src="gp.png" alt="">
+                <img src="tw.png" alt="">
+            </div>
+            <form id="login" method="POST" class="input-group">
+                <!-- <label for="email" class="input-field">Email address</label> -->
+                <input for="email" type="email" required class="input-field" name="email" placeholder="Email" aria-describedby="emailHelp">
+                <!-- <label for="password" class="input-field">Password</label> -->
+                <input for="password" type="password" required class="input-field" placeholder="Password" name="password">
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+
+            <form id="register" method="POST" class="input-group">
+                <!-- <label for="first_name" class="input-field">First Name</label> -->
+                <input for="first_name" type="text" required class="input-field" name="first_name" placeholder="Enter first name">
+
+                <!-- <label for="last_name" class="input-field">Last Name</label> -->
+                <input for="last_name" type="text" required class="input-field" name="last_name" placeholder="Enter last name">
+
+                <!-- <label for="email" class="input-field">Email address</label> -->
+                <input for="email" type="email" required class="input-field" name="email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <!-- <div id="emailHelp" class="form-text">I will share your email</div> -->
+                <!-- <label for="password" class="form-label">Password</label> -->
+                <input for="password" type="password" required class="input-field" name="password" placeholder="Enter password">
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        var x=document.getElementById("login")
+        var y=document.getElementById("register")
+        var z=document.getElementById("btn")
+
+
+        function register(){
+            x.style.left="-400px"
+            y.style.left="50px"
+            z.style.left="110px"
+        }
+
+        function login(){
+            x.style.left="50px"
+            y.style.left="450px"
+            z.style.left="0px"
+        }
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

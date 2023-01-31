@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Book Detail</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Book Detail</h1>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row">Title</th>
+                <td>{{book.title}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Author</th>
+                <td>{{book.author}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Availability</th>
+                <td colspan="2">
+                    {% if avl %}
+                    <div class="alert alert-success" role="alert">
+                        Availabel
+                    </div>
+                    {% endif %}
+                    {% if not avl %}
+                    <div class="alert alert-danger" role="alert">
+                        Not Availabel
+                    </div>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {% if avl %}
+        <!-- <button class="btn btn-primary" >ISSUE</button> -->
+        <a href="/issue-book/{{book.id}}" class="btn btn-primary">ISSUE</a>
+    {% endif %}
+    {% if not avl %}
+        <button class="btn btn-primary" disabled>ISSUE</button>
+    {% endif %}
+</div>
+
+
+{% endblock %}
